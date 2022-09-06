@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-image: linear-gradient(to right,#7a7ffb,#88eaf9);
+
+    color: white;
+}
+
+.logo{
+    font-size: 20px;
+    margin-left: 55px;
+}
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
+.home{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.name{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-color: white;
+
+}
+.menuicon{
+    font-size: 20px;
+}
+.mobile-menu-icon{
+    display: none;
+}
+@media screen and (max-width:850px) {
+    .log{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+    .name{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border: 1px solid black;
+        border-radius: 100px;
+        background-color: white;
+        width: 70px;
+        text-align: center;
+        margin-bottom: 20px;
+    
+    }
+    .nav-links{
+        display: none;
+    }
+    .navbar{
+        background-image: none;
+        background-color: black;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        /* background-image: linear-gradient(to right,#7a7ffb,#88eaf9); */
+        background-color: black;
+        left: 0;
+        top: 75px;
+        width: 100%;
+        transition: all 0.5s ease-out;
+    }
+    .home{
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        color: white;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 29px;
+    }
+}

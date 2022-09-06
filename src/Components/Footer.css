@@ -1,0 +1,93 @@
+.footerblock{
+    background-color: black;
+
+}
+.blockwidthflex{
+    align-content: center;
+}
+.footerblockchild{
+    flex-basis: 30%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+
+}
+.footerheading{
+    font-size: 13px;
+    font-family: sans-serif;
+    padding-right: 15px;
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+.footertable{
+    text-align: left;
+    /* margin-bottom: 10px; */
+}
+.footersocialicon{
+    color: white;
+    background-color: black;
+    font-size: 10px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.fa{
+    width: 15px;
+}
+
+.emailblock{
+    margin-top: 10px;
+}
+.footeremail{
+    width: 185px;
+    background-color: black;
+    
+    border: 0.5px solid gray;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+    height: 30px;
+
+}
+.arrow{
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to right,#7a7ffb,#88eaf9);
+    border: 1px solid gray;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
+.statsicon{
+    padding-top: 10px;
+    padding-left: 7px;
+    color: lightblue;
+
+}
+.designicon{
+    padding-top: 20px;
+    color: lightgray;
+    font-size: 35px;
+}
+.formaltext{
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: gray;
+    
+}
+
+@media(min-width:850px) {
+    .footerblock{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerblockchild{
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+    .blockwidthflex{
+        display: flex;
+    }
+}

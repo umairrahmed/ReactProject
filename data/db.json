@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "title": "Honesty",
+      "body": "Honesty is best policy.",
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "title": "Courtesy",
+      "body": "Courtesy is best.",
+      "userId": "1",
+      "id": 2
+    },
+    {
+      "title": "Death",
+      "body": "Death is compulsory",
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "title": "YOU",
+      "body": "You are best.",
+      "userId": "2",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "Umair Ahmed",
+      "email": "umairr.ahmed@devsinc.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "Kashir Saeed",
+      "email": "2020cs27@student.uet.edu.pk",
+      "password": "1234",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "body": "dg",
+      "userId": "1",
+      "postId": "1",
+      "id": 14
+    },
+    {
+      "body": "k,s,,,x",
+      "userId": "1",
+      "postId": "1",
+      "id": 15
+    },
+    {
+      "body": "This is a best post",
+      "userId": "1",
+      "postId": "1",
+      "id": 16
+    },
+    {
+      "body": "Hellow World",
+      "userId": "1",
+      "postId": "1",
+      "id": 17
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

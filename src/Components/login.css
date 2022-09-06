@@ -1,0 +1,67 @@
+.loginpage{
+    background-image: linear-gradient(to right,#7a7ffb,#88eaf9);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.postpage{
+    background-color: #f9f9ff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.user{
+    display: none;
+}
+.signcontainer{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    height: 500px;
+    max-width: 600px;
+    padding-top: 40px;
+
+}
+.postcontainer{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    height: 450px;
+    max-width: 600px;
+    padding-top: 20px;
+    border: 1px solid blue;
+    margin-top: 10px;
+
+}
+.button{
+    background-image: linear-gradient(to right,#7a7ffb,#88eaf9);
+    width: 210px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+.inputfield{
+    width: 200px;
+}
+.body{
+    width: 350px;
+    height: 150px;
+}
+.createaccount{
+    color: blue;
+    font-size: small;
+    
+}

@@ -1,0 +1,54 @@
+.postbox{
+    background-color: white;
+    border:  none;
+    padding: 20px;
+    margin-top: 30px;
+    flex-basis: 30%;
+
+
+}
+.posttitle{
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-size: 15px;
+    color:black;
+    
+}
+.postcontent{
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-size: 11px;
+    color: gray;
+    font-style: italic;
+}
+.row{
+    margin: 0;
+}
+.postman{
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-size: 10px;
+    color:black;
+    
+}
+.posttable{
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+}
+.fa-trash{
+    color: red;
+    font-size: 15px;
+    margin-left: auto;
+    margin-top: 5px;
+}
+.fa-comment{
+    color: blue;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.fa-edit{
+    margin-top: 5px;
+    color: green;
+    font-size: 15px;
+}

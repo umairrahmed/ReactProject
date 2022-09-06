@@ -1,0 +1,16 @@
+
+@media screen and (min-width:850px) {
+    
+    .postscontainer{
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.postscontainer{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+

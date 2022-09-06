@@ -1,0 +1,54 @@
+.comment{
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fa-paper-plane{
+    color: #7a7ffb;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.commentContainer{
+    width: 100%;
+}
+.updateComment{
+    background-color: #7a7ffb;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+}
+.commentText{
+    width: 450px;
+}
+.postbox{
+    margin-left: 5px;
+}
+.commentHeading{
+    margin-left: 55px;
+}
+.alonePost{
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+
+@media screen and (min-width:850px) {
+    
+    .commentscontainer{
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.commentscontainer{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.commentbutton{
+    border: none;
+    background-color: transparent;
+}
