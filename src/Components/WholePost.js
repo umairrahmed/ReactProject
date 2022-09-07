@@ -28,7 +28,7 @@ function WholePost() {
             <hr/>
             <h1 className='commentHeading'>Comments:</h1>
             <div className='commentscontainer'>
-                {comments.map(comment=><Comment id={comment.id} userId={users[localStorage.getItem('userId')-1]?.name} postId={comment.postId} body={comment.body} />)}
+                {comments.map(comment=><Comment id={comment.id} userId={users[comment.userId-1]?.name} postId={comment.postId} body={comment.body} />)}
             </div>
 
         </div>

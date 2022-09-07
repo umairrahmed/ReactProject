@@ -42,7 +42,8 @@ function SignUp(props) {
                 }
             }
             addUser(values)
-            navigate('/main')
+        
+            props.handleChange()
             
          }}
         >

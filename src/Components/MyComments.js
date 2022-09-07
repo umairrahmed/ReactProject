@@ -37,6 +37,7 @@ function MyComments() {
         <div>
             <Formik initialValues={{body:"",userId:"",postId:""}} 
                 onSubmit={(values)=>{
+                    
                     values.userId=localStorage.getItem('userId')
                     values.postId=localStorage.getItem('postId')
                     fetch(' http://localhost:3000/comments',{

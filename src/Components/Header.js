@@ -15,10 +15,10 @@ function Header(props) {
                 <Link to='/main/myposts' className='home'>
                     <li onClick={()=>{if(!isMobile){setIsMobile(!isMobile)}}}>MyPosts</li>
                 </Link>
-                <Link to='/' className='home'>
+                <Link to='/main/aboutus' className='home'>
                     <li onClick={()=>{if(!isMobile){setIsMobile(!isMobile)}}}>About</li>
                 </Link>
-                <Link to='/' className='home'>
+                <Link to='/main/contactus' className='home'>
                     <li onClick={()=>{if(!isMobile){setIsMobile(!isMobile)}}}>Contact</li>
                 </Link>
                 <Link to='/' className='home'>
