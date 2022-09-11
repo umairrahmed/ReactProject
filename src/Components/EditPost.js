@@ -1,8 +1,6 @@
-import React, { Component, useState } from 'react';
 import {Formik,Field,Form} from "formik"
 import './login.css'
-import {useNavigate,useParams} from 'react-router-dom'
-import { data } from 'jquery';
+import {useNavigate} from 'react-router-dom'
 
 function PostForm(props) {
     const navigate=useNavigate()
