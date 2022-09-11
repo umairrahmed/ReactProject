@@ -11,13 +11,14 @@ function SignUp(props) {
     const navigate=useNavigate()
 
     let getUsers=()=>{
-        fetch('http://localhost:3000/users')
+        fetch('https://reactappjsonserver.herokuapp.com/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     }
+    localStorage.clear()
 
     let addUser=(values)=>{
-        fetch(' http://localhost:3000/users',{
+        fetch(' https://reactappjsonserver.herokuapp.com/users',{
                 method:'POST',
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values)

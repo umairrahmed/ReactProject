@@ -13,19 +13,19 @@ function MyComments() {
     const navigate=useNavigate()
 
     useEffect(()=>{
-        fetch('http://localhost:3000/comments')
+        fetch('https://reactappjsonserver.herokuapp.com/comments')
         .then(res=> { return res.json()})
         .then(comments=>{   let comment= comments.filter(comment=>comment.userId==localStorage.getItem('userId')&&comment.postId===localStorage.getItem('postId')); return comment})
         .then(data=>{setComments(data)})
 
-        fetch('http://localhost:3000/users')
+        fetch('https://reactappjsonserver.herokuapp.com/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     },[])
     const updatePage=(values)=>{
         values.userId=localStorage.getItem('userId')
         values.postId=localStorage.getItem('postId')
-        fetch(' http://localhost:3000/comments',{
+        fetch(' https://reactappjsonserver.herokuapp.com/comments',{
         method:'POST',
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(values)
@@ -40,7 +40,7 @@ function MyComments() {
                     
                     values.userId=localStorage.getItem('userId')
                     values.postId=localStorage.getItem('postId')
-                    fetch(' http://localhost:3000/comments',{
+                    fetch(' https://reactappjsonserver.herokuapp.com/comments',{
                     method:'POST',
                     headers:{"Content-Type":"application/json"},
                     body:JSON.stringify(values)

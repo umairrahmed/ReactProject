@@ -8,12 +8,12 @@ function Posts(props) {
     const [users,setUsers]=useState( [])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/posts')
+        fetch('https://reactappjsonserver.herokuapp.com/posts')
         .then(res=> { return res.json()})
         .then(posts=>{   let post= posts.filter(post=>post.userId===localStorage.getItem('userId')); return post})
         .then(data=>{setPosts(data)})
 
-        fetch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://reactappjsonserver.herokuapp.com/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     },[])

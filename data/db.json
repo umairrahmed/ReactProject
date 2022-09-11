@@ -605,6 +605,12 @@
       "body": "",
       "userId": "13",
       "id": 101
+    },
+    {
+      "title": "Honety",
+      "body": "Honesty is best policy.",
+      "userId": "11",
+      "id": 102
     }
   ],
   "users": [
@@ -685,6 +691,12 @@
       "email": "kashirsaeed17@gmail.com",
       "password": "012345",
       "id": 13
+    },
+    {
+      "name": "Ali",
+      "email": "ali@gmail.com",
+      "password": "1234",
+      "id": 14
     }
   ],
   "comments": [
@@ -735,6 +747,12 @@
       "userId": "13",
       "postId": "4",
       "id": 21
+    },
+    {
+      "body": "This is a best post",
+      "userId": "11",
+      "postId": "102",
+      "id": 22
     }
   ],
   "profile": {

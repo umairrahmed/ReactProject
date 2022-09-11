@@ -1,6 +1,7 @@
 import Post from "./Post";
 import React, {  useEffect, useState } from 'react';
 import './Posts.css'
+import getPosts from '../Services/Posts'
 
 function Posts(props) {
 
@@ -8,11 +9,13 @@ function Posts(props) {
     const [users,setUsers]=useState( [])
 
     useEffect(()=>{
-        fetch('http://localhost:3000/posts')
+        fetch('https://reactappjsonserver.herokuapp.com/posts')
         .then(res=> { return res.json()})
-        .then(data=>{setPosts(data)})
+        .then(data=>{setPosts(data.reverse())})
+        
 
-        fetch('http://localhost:3000/users')
+
+        fetch('https://reactappjsonserver.herokuapp.com/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     },[])

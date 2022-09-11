@@ -13,7 +13,7 @@ function PostForm(props) {
         <Formik initialValues={{title:"",body:"",userId:""}} 
         onSubmit={(values)=>{
             values.userId=localStorage.getItem('userId')
-            fetch(' http://localhost:3000/posts',{
+            fetch(' https://reactappjsonserver.herokuapp.com/posts',{
                 method:'POST',
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values)

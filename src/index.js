@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
 import LogIn from './Components/LogIn';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import MainPage from './Components/MainPage';
+import MainPage from './Pages/MainPage';
 import Error from './Components/Error';
 
 
@@ -17,8 +17,7 @@ root.render(
       <Router>
         <Routes>
           <Route path='/'  element={<LogIn />}/>
-          <Route path='/main/*' element={<MainPage/>}/>
-          {/* <Route path='/main' render={(props)=><MainPage userName="Umair"{...props}/>}/> */}
+           <Route path='/main/*' element={<MainPage/>}/>
           <Route path='*' element={<Error/>}/>
       </Routes>
     </Router>

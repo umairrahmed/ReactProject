@@ -8,10 +8,11 @@ function SignIn(props) {
     const [users,setUsers]=useState(null)
     const navigate=useNavigate()
     useEffect(()=>{
-        fetch('http://localhost:3000/users')
+        fetch('https://reactappjsonserver.herokuapp.com/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     },[])
+    localStorage.clear()
     return ( <div className='loginpage'>
     <div className='signcontainer'>
         <h1>Sign In</h1>

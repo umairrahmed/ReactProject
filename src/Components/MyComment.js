@@ -19,7 +19,7 @@ function MyComment(props) {
     const handleDelete=()=>{
         if(window.confirm("Are you sure you want to delete?"))
             {
-            fetch(`http://localhost:3000/comments/${props.id}`,{
+            fetch(`https://reactappjsonserver.herokuapp.com/comments/${props.id}`,{
                 method:'DELETE'
             }).then(()=>{
                 window.location.reload(false);
@@ -34,7 +34,7 @@ function MyComment(props) {
                     <Formik initialValues={{body:props.body}} 
                             onSubmit={(values)=>{
                                 values.userId=localStorage.getItem('userId')
-                                fetch(`http://localhost:3000/comments/${props.id}`,{
+                                fetch(`https://reactappjsonserver.herokuapp.com/comments/${props.id}`,{
                                     method:'PATCH',
                                     headers:{"Content-Type":"application/json"},
                                     body:JSON.stringify(values)

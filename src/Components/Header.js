@@ -21,7 +21,7 @@ function Header(props) {
                 <Link to='/main/contactus' className='home'>
                     <li onClick={()=>{if(!isMobile){setIsMobile(!isMobile)}}}>Contact</li>
                 </Link>
-                <Link to='/' className='home'>
+                <Link to='/' className='home' onClick={()=>{localStorage.clear()}}>
                     <li onClick={()=>{if(!isMobile){setIsMobile(!isMobile)}}}>LogOut</li>
                 </Link>
                 <Link to='/main/post' className='home'>

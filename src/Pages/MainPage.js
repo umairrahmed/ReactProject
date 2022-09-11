@@ -1,20 +1,20 @@
 import React, { Component, useEffect } from 'react';
-import Header from './Header';
+import Header from '../Components/Header';
 import {useLocation} from 'react-router-dom'
-import Footer from './Footer';
-import Post from './Post';
+import Footer from '../Components/Footer';
+import Post from '../Components/Post';
 import './MainPage.css'
 import {useNavigate} from 'react-router-dom'
-import PostForm from './PostForm';
-import MyPosts from './MyPosts'
-import Posts from './Posts';
-import Comments from './Comments';
-import EditPost from './EditPost'
-import MyComments from './MyComments';
-import WholePost from './WholePost';
+import PostForm from '../Components/PostForm';
+import MyPosts from '../Components/MyPosts'
+import Posts from '../Components/Posts';
+import Comments from '../Components/Comments';
+import EditPost from '../Components/EditPost'
+import MyComments from '../Components/MyComments';
+import WholePost from '../Components/WholePost';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import About from './AboutComponent';
-import Contact from './ContactusComponent';
+import About from '../Components/AboutComponent';
+import Contact from '../Components/ContactusComponent';
 
 
 
@@ -22,6 +22,8 @@ import Contact from './ContactusComponent';
 
 function MainPage() {
     const navigate=useNavigate()
+    if(localStorage.getItem('userId'))
+    {
     return (
         <div className='mainpage'>
             
@@ -40,8 +42,10 @@ function MainPage() {
             </Routes>
             <Footer/>
             
+            
         </div> 
      );
+    }
 }
 
 export default MainPage;

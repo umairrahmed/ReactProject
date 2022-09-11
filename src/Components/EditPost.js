@@ -15,7 +15,7 @@ function PostForm(props) {
         onSubmit={(values)=>{
             if(window.confirm("Are you sure you want to update?"))
             {
-                fetch(`http://localhost:3000/posts/${localStorage.getItem('id')}`,{
+                fetch(`https://reactappjsonserver.herokuapp.com/posts/${localStorage.getItem('id')}`,{
                 method:'PATCH',
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values)
