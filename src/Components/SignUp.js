@@ -11,19 +11,19 @@ function SignUp(props) {
     const navigate=useNavigate()
 
     let getUsers=()=>{
-        fetch('https://reactappjsonserver.herokuapp.com/users')
+        fetch('http://localhost:3000/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     }
     localStorage.clear()
 
     let addUser=(values)=>{
-        fetch(' https://reactappjsonserver.herokuapp.com/users',{
+        fetch(' http://localhost:3000/users',{
                 method:'POST',
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values)
             }).then(()=>{
-                console.log("User is added")
+                alert("User is added")
             })
     }
 
@@ -32,16 +32,17 @@ function SignUp(props) {
     <div className='signcontainer'>
         <h1>Sign Up</h1>
         <br/>
-        <Formik initialValues={{name:"",email:"",password:""}} 
+        <Formik initialValues={{name:"",email:"",password:"",role:""}} 
         onSubmit={(values)=>{
             getUsers()
             for(let x of users){
-                if(x.email==values.email)
+                if(x.email==values.email && x.role==document.getElementById('role').value)
                 {
                     alert("User with this account already exist")
                     return 0
                 }
             }
+            values.role=document.getElementById('role').value
             addUser(values)
         
             props.handleChange()
@@ -57,6 +58,15 @@ function SignUp(props) {
                 <br/><br/>
                 <label>Password</label><br/>
                 <Field className="inputfield" name="password" type="password" required/>
+                <br/><br/>
+                <label>Role</label><br/>
+                <select className='inputfield' id='role' name="role" required>
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="manager">Project Manager</option>
+                    <option value="developer">Developer</option>
+                    <option value="qa">QA</option>
+
+                </select>
                 <br/><br/><br/>
                 <button className='button' type='submit'>Sign Up</button>
             </Form>

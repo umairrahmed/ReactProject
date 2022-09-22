@@ -1,33 +1,33 @@
 import React, { Component,useEffect,useState } from 'react';
 import './Post.css'
 import {useNavigate} from 'react-router-dom'
-import { FaComment} from "react-icons/fa";
 
 
 
-function Post(props) {
+function DeveloperProject(props) {
     const navigate=useNavigate()
-    const handleComment=()=>{
-        localStorage.setItem('postId',props.id)
-        navigate('/main/mycomments')
+    const addBug=()=>{
+        localStorage.setItem('projectId',props.id)
+        navigate('/qa/bug')
     }
+    
     const wholePost=()=>{
-        localStorage.setItem('postId',props.id)
-        navigate('/main/wholepost')
+        localStorage.setItem('projectId',props.id)
+        navigate('/developer/wholeproject')
     }
     return ( 
         <div className='postbox' >
             <table className='posttable'>
                 <div onClick={()=>{wholePost()}}>
                     <tr><td className='posttitle'><b>{props.title}</b></td></tr>
-                    <tr><td className='postcontent'>{props.body}</td></tr>
+                    <tr><td className='postcontent'>{props.description}</td></tr>
                 </div>
                 <hr className='row'></hr>
-                <tr><td className='postman'><b>{props.userId}</b></td><tc><i onClick={()=>{handleComment()}} class="fas fa-comment"></i></tc></tr>
+                <tr><td className='postman'><i onClick={()=>{addBug()}} class="fas fa-pen"></i></td></tr>
             </table>
         </div>
      );
 }
 
 
-export default Post;
+export default DeveloperProject;

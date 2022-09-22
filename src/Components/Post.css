@@ -42,6 +42,12 @@
     margin-left: auto;
     margin-top: 5px;
 }
+.fa-pen{
+    color: red;
+    font-size: 15px;
+    margin-left: auto;
+    margin-top: 5px;
+}
 .fa-comment{
     color: blue;
     font-size: 15px;
@@ -51,4 +57,10 @@
     margin-top: 5px;
     color: green;
     font-size: 15px;
+}
+.status{
+    color: green;
+}
+.updatebutton{
+    margin-top: 20px;
 }

@@ -25,7 +25,7 @@
     align-items: center;
     justify-items: center;
     width: 80%;
-    height: 500px;
+    height: 600px;
     max-width: 600px;
     padding-top: 40px;
 
@@ -36,13 +36,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
     width: 80%;
     height: 400px;
     max-width: 600px;
     padding-top: 20px;
     border: 1px solid blue;
-    margin-top: 10px;
+    margin-top: 1px;
 
 }
 .button{
@@ -57,10 +56,25 @@
     width: 200px;
 }
 .body{
-    width: 500px;
+    width: 350px;
 }
 .createaccount{
     color: blue;
     font-size: small;
     
+}
+.qa{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 30px;
+    color: white;
+    background-color:#88eaf9 ;
+}
+.developer{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:#7a7ffb ;
 }

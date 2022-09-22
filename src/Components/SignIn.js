@@ -8,7 +8,7 @@ function SignIn(props) {
     const [users,setUsers]=useState(null)
     const navigate=useNavigate()
     useEffect(()=>{
-        fetch('https://reactappjsonserver.herokuapp.com/users')
+        fetch('http://localhost:3000/users')
         .then(res=> { return res.json()})
         .then(data=>{setUsers(data)})
     },[])
@@ -20,10 +20,21 @@ function SignIn(props) {
         <Formik initialValues={{email:"",password:""}} 
         onSubmit={(values)=>{
             for(let x of users){
-                if(x.email==values.email && x.password==values.password )
+                if(x.email==values.email && x.password==values.password  && x.role==document.getElementById('role').value)
                 {
                     localStorage.setItem('userId',x.id)
-                    navigate('/main')
+                    if(x.role=='manager')
+                    {
+                        navigate('/main')
+                    }
+                    else if(x.role=='qa')
+                    {
+                        navigate('/qa')
+                    }
+                    else if(x.role=='developer')
+                    {
+                        navigate('/developer')
+                    }
                     return
                 }
             }
@@ -36,8 +47,18 @@ function SignIn(props) {
                 <br/><br/>
                 <label>Password</label><br/>
                 <Field className="inputfield" name="password" type="password" required />
+                <br/><br/>
+                <label>Role</label><br/>
+                <select className='inputfield' id='role' name="role" required>
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="manager">Project Manager</option>
+                    <option value="developer">Developer</option>
+                    <option value="qa">QA</option>
+
+                </select>
                 <br/><br/><br/>
                 <button className='button' type='submit'>Sign In</button>
+                
                 <br/><br/><br/>
             </Form>
         </Formik>

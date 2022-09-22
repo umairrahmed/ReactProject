@@ -7,6 +7,8 @@ import LogIn from './Components/LogIn';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import MainPage from './Pages/MainPage';
 import Error from './Components/Error';
+import UserPage from './Pages/UserPage';
+import DeveloperPage from './Pages/DeveloperPage';
 
 
 
@@ -17,6 +19,8 @@ root.render(
         <Routes>
           <Route path='/'  element={<LogIn />}/>
            <Route path='/main/*' element={<MainPage/>}/>
+           <Route path='/qa/*' element={<UserPage/>}/>
+           <Route path='/developer/*' element={<DeveloperPage/>}/>
           <Route path='*' element={<Error/>}/>
       </Routes>
     </Router>

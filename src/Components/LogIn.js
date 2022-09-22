@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import PostForm from './PostForm';
 
 class LogIn extends Component {
     state = { 
